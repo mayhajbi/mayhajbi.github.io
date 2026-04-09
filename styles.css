@@ -11,18 +11,82 @@ header {
   padding: 20px;
   border-bottom: 1px solid #333;
 }
-h1 { color: #7df9ff; }
+h1 { color: #7df9ff; text-align:center; }
+nav { text-align:center; margin-top:10px; }
 nav a {
   color: #ffdd57;
-  margin-left: 15px;
+  margin: 0 10px;
   text-decoration: none;
 }
-nav a:hover {
-  color: #7df9ff;
+nav a:hover { color: #7df9ff; }
+
+/* Grid for 3 columns */
+.three-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
 }
-section {
-  padding: 25px;
-  line-height: 1.7;
-  font-size: 1.1rem;
+
+/* Card style */
+.column-card {
+  background: #111;
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.1);
 }
-h2 { color: #7df9ff; }
+.column-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.25);
+  border-color: #7df9ff;
+}
+.column-card h2 { color: #7df9ff; }
+.column-card h3 { color: #ffdd57; font-weight:normal; }
+
+@media (max-width: 900px) {
+  .three-columns { grid-template-columns: 1fr; }
+}
+
+/* Post template extras */
+.post-container {
+    padding: 25px;
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.8;
+}
+.post-intro {
+    background: #141414;
+    border-right: 4px solid #7df9ff;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+}
+.highlight-box {
+    background: #1a1a1a;
+    border-left: 4px solid #7df9ff;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+.note-box {
+    background: #222;
+    border-left: 4px solid #ffdd57;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+.code-block {
+    background: #111;
+    border: 1px solid #333;
+    padding: 12px;
+    direction: ltr;
+    color: #7df9ff;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    overflow-x: auto;
+}
