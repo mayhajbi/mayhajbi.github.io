@@ -15,7 +15,7 @@ nav a { color:#ffdd57; margin:0 10px; text-decoration:none; }
 nav a:hover { color:#7df9ff; }
 
 /* Columns layout */
-.three-columns { display:grid; grid-template-columns:repeat(3,1fr); gap:25px;
+.three-columns { display:grid; text-align: center; grid-template-columns:repeat(3,1fr); gap:25px;
  padding:30px; max-width:1200px; margin:auto; }
 
 .column-card { background:#111; border:1px solid #333; padding:20px; border-radius:12px;
@@ -24,6 +24,12 @@ nav a:hover { color:#7df9ff; }
 .column-card:hover { transform:translateY(-5px); box-shadow:0 0 15px rgba(0,255,255,0.4);
  border-color:#7df9ff; }
 
+.column-card h2,
+.column-card h3,
+.column-card p {
+    text-align: center;
+}
+
 @keyframes glow { from{box-shadow:0 0 8px rgba(0,255,255,0.15);} to{box-shadow:0 0 16px rgba(0,255,255,0.35);} }
 
 .icon { width:45px; margin-bottom:10px; filter:drop-shadow(0 0 6px #7df9ff); }
@@ -31,7 +37,7 @@ nav a:hover { color:#7df9ff; }
 @media(max-width:900px){ .three-columns{grid-template-columns:1fr;} }
 
 /* Post layout */
-.post-container { padding:25px; max-width:900px; margin:auto; line-height:1.8; text-align:right; }
+.post-container { padding:25px; max-width:900px; margin:auto; line-height:1.8; text-align:right; direction:rtl; }
 
 .post-intro { background:#141414; border-right:4px solid #7df9ff; padding:15px; border-radius:6px; }
 
